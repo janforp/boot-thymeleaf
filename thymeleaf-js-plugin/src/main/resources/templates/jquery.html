@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Jquery的使用</title>
+        <!--设置icon-->
+        <link rel="shortcut icon" th:href="@{/img/icon.png}" type="image/gif" />
+        <link rel="stylesheet" th:href="@{/css/jquery.css}" />
+        <!--使用 jquery 插件-->
+        <script th:src="@{/plugins/jquery/jquery-3.1.1.min.js}"></script>
+        <script>
+            $(function () {
+                alert("页面加载完毕，我要弹出  ");
+            })
+        </script>
+    </head>
+    <body>
+        <h1 th:inline="text">Jquery的使用</h1>
+        <div>
+            <span id="red">我是红色的</span>
+        </div>
+        <div>
+            <!--引用图片资源-->
+            <img src="/img/icon.png"/>
+        </div>
+
+    </body>
+</html>
