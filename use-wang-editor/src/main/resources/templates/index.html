@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>首页</title>
+    <!--设置icon-->
+    <link rel="shortcut icon" th:href="@{/img/icon.png}" type="image/gif" />
+    <!--使用 jquery 插件-->
+    <script th:src="@{/plugin/jquery/jquery-3.1.1.min.js}"></script>
+    <script th:src="@{/plugin/wangEditor/wangEditor.js}"></script>
+    <script th:src="@{/js/index.js}"></script>
+</head>
+<body>
+<h1 th:inline="text">使用富文本编辑器</h1>
+<!--用父容器来控制宽度-->
+<div style="width:800px">
+    <!--用当前元素来控制高度-->
+    <textarea id="textarea1" style="height:400px;max-height:500px;">
+        <p>请输入内容...</p>
+    </textarea>
+</div>
+<button id="btn1">获取内容</button>
+</body>
+</html>

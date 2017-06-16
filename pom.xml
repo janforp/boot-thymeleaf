@@ -9,7 +9,8 @@
 	<modules>
 		<module>use-thymeleaf-demo</module>
 		<module>thymeleaf-js-plugin</module>
-	</modules>
+        <module>use-wang-editor</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>boot-thymeleaf</name>
