@@ -1,7 +1,9 @@
 package com.janita.editor.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.janita.editor.service.UploadService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * Created by Janita on 2017/6/18- 16:11
@@ -10,9 +12,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UploadController {
 
-    @RequestMapping("/upload")
-    public String upload(){
-        System.out.println("\n****************** ");
-        return "图片url";
+    @Autowired
+    private UploadService uploadService;
+
+    /**
+     * 上传文件
+     * @param file  文件
+     * @return
+     */
+    @RequestMapping(value = "/upload",method = RequestMethod.POST)
+    @ResponseBody
+    public String uploadMultipartFile( @RequestParam("file") MultipartFile file){
+        String url = uploadService.upload(file);
+        System.out.println("*****"+url);
+        return url;
     }
 }

@@ -24,7 +24,7 @@ var editor = {
      */
     createEditorTwo:function (domId,uploadUrl) {
         var editor = new wangEditor(domId);
-        editor.config.uploadImgUrl = '/upload';
+        editor.config.uploadImgUrl = uploadUrl;
         editor.create();
     }
 };
