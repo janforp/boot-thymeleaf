@@ -15,5 +15,16 @@ var editor = {
         // 生成编辑器
         var editor = new wangEditor(div);
         editor.create();
+    },
+
+    /**
+     * 能够上传图片的对象
+     * @param domId id
+     * @param uploadUrl 上传路径
+     */
+    createEditorTwo:function (domId,uploadUrl) {
+        var editor = new wangEditor(domId);
+        editor.config.uploadImgUrl = '/upload';
+        editor.create();
     }
 };

@@ -6,5 +6,6 @@
  * 页面加载完成后
  */
 $(function () {
-    editor.createEditor("editor");
+    // editor.createEditor("editor");
+    editor.createEditorTwo("editor", '/upload');
 });
