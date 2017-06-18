@@ -6,5 +6,5 @@
  * 页面加载完成后
  */
 $(function () {
-    utils.print("页面加载完毕!");
+    editor.createEditor("editor");
 });

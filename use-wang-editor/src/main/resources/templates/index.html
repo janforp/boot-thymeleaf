@@ -15,11 +15,6 @@
     <!--这些 js　的引入放在　body 后面,否则可能出错-->
     <script th:src="@{/plugin/wangEditor/js/lib/jquery-1.10.2.min.js}"></script>
     <script th:src="@{/plugin/wangEditor/js/wangEditor.min.js}"></script>
-    <script>
-        // 获取元素
-        var div = document.getElementById('editor');
-        // 生成编辑器
-        var editor = new wangEditor(div);
-        editor.create();
-    </script>
+    <script th:src="@{/js/utils/WangEditorUtils.js}"></script>
+    <script th:src="@{/js/index/index.js}"></script>
 </html>
