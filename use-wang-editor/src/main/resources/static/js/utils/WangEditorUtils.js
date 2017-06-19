@@ -20,7 +20,7 @@ var editor = {
     /**
      * 能够上传图片的对象
      * @param domId id
-     * @param uploadUrl 上传路径
+     * @param uploadUrl 上传图片的请求url
      */
     createEditorTwo:function (domId,uploadUrl) {
         var editor = new wangEditor(domId);

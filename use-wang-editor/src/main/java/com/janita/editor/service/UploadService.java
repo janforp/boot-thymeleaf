@@ -41,7 +41,7 @@ public class UploadService {
     public String upload(MultipartFile file, String type) {
         String url = null;
         try {
-            url =  AliOss.uploadMultipartFile("hongbao/"+UUID.randomUUID().toString(), file, type);
+            url =  AliOss.uploadMultipartFile("janita/"+UUID.randomUUID().toString(), file, type);
         } catch (Exception e) {
             e.printStackTrace();
         }
