@@ -30,4 +30,21 @@ public class UploadService {
         }
         return url;
     }
+
+    /**
+     * 上传图片
+     *
+     * @param file
+     * @param type
+     * @return
+     */
+    public String upload(MultipartFile file, String type) {
+        String url = null;
+        try {
+            url =  AliOss.uploadMultipartFile("hongbao/"+UUID.randomUUID().toString(), file, type);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return url;
+    }
 }
