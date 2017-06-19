@@ -41,8 +41,6 @@ public class UploadController {
     @RequestMapping(value = "/upload")
     @ResponseBody
     public String upload(HttpServletRequest req) {
-
-
         MultipartHttpServletRequest mReq = (MultipartHttpServletRequest)req;
         Map<String, MultipartFile> fileMap = mReq.getFileMap();
         Set<String> strings = fileMap.keySet();
@@ -50,7 +48,6 @@ public class UploadController {
         String name = list.get(0);
         MultipartFile file = fileMap.get(name);
         String fileName = file.getOriginalFilename();
-
         String url = "";
         //获得扩展名
         String ext = fileName.substring(fileName.lastIndexOf(".") + 1,fileName.length()).toLowerCase();
